@@ -6,8 +6,6 @@ import os
 from google import genai
 from google.genai import types
 
-from dotenv import load_dotenv
-load_dotenv()
 
 with open("main.json", "r") as f:
     data = f.read()
@@ -15,7 +13,7 @@ with open("main.json", "r") as f:
 
 def generate(savol):
     client = genai.Client(
-        api_key=os.getenv("GEMINI_API_TOKEN"),
+        api_key="AIzaSyDFp3QYNNMG-9c1jhhlv3IAMcsgKofmYOo",
     )
 
     model = "gemini-2.0-flash-lite"
